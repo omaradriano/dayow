@@ -1,9 +1,9 @@
-import Title from "./components/titles.jsx"
-import Card from "./components/card.jsx"
+import Title from "./components/Title.jsx"
+import Card from "./components/Card.jsx"
 
 import './css/custom.css'
 
-let msg = 'El nuevo texto agregado'
+let msg = 'Day OW'
 
 const App = () => {
     return (

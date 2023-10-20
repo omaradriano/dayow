@@ -7,49 +7,159 @@
     font-family: 'Roboto Mono', monospace;
 }
 
-body { 
-    min-height: 100vh; 
-    background-color: bisque;
+:root {
+    --sunny-color: #fbda78;
+    --general-card-color: #f5f5f5;
 }
 
-#root {
-    width: 100%;
-    height: 150px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.title {
-    letter-spacing: 10px;
-}
-
-.card {
-
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    min-width: 300px;
-    min-height: 450px;
-    max-height: 500px;
-    max-width: 350px;
-
-    background-color: cornflowerblue;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-
-}
-
+/* Components*/
 .btn {
     border: none;
     border-radius: 5px;
     outline: none;
     padding: 5px;
     align-content: center;
+}
+
+
+body { 
+    min-height: 100vh; 
+    background-color: bisque;
+}
+
+#root {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+
+}
+
+.title {
+    letter-spacing: 5px;
+    margin: 30px 0;
+}
+
+.card {
+    position: relative;
+    top: 20px;
+    /* bottom: 0; */
+    /* left: 0; */
+    /* right: 0;  */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+
+    width: 90%;
+    height: 500px;
+    max-width: 400px;
+
+    /* background-color: rgb(159, 188, 243); */
+    border-radius: 10px;
+    outline: none;
+    border: none;
+
+    /* box-shadow: 2px 2px 5px 0.5px rgba(0, 0, 0, 0.5); */
+    overflow: hidden;
+
+}
+
+.weatherIcon {
+    position: absolute;
+    z-index: 1;
+}
+
+.weatherInfo {
+    position: relative;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 60%;
+    width: 100%;
+    padding: 40px;
+    background-color: var(--sunny-color);
+}
+
+.weatherInfo__state {
+    font-size: 38px;
+}
+
+.weatherInfo > p{
+    margin: 10px;
+}
+
+.weatherInfo__grades {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.weatherStadistics {
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40%;
+    padding: 0 40px;
+    background-color: var(--general-card-color);
+    width: 100%;
+}
+
+.weatherStadistics__left {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.weatherStadistics__left > p {
+    margin: 10px;
+    font-size: 24px;
+}
+
+.weatherStadistics__right {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.weatherStadistics__right > p {
+    margin: 10px;
+    font-size: 24px;
+}
+
+.weatherStadistics > p {
+    font-size: 28px;
+} 
+.weatherIcon__sunny {
+    top: calc(15% - 20px);
+    left: calc(15% - 20px);
+    font-size: 120px !important;
+    color: #f3b80b;
+}
+
+/* .material-icons {
+    font-size: 40px !important;
+} */
+
+@media screen and (min-width: 320px){
+    .card {
+        min-width: 280px;
+        min-height: 400px;
+    }
 }
