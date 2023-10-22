@@ -12,14 +12,18 @@
     --general-card-color: #f5f5f5;
 }
 
-/* Components*/
+/* ---------- Start Components ----------*/
 .btn {
+    cursor: pointer;
+    position: absolute;
     border: none;
     border-radius: 5px;
     outline: none;
-    padding: 5px;
+    padding: 5px 10px;
     align-content: center;
 }
+
+/* ---------- End Components ---------- */
 
 
 body { 
@@ -60,6 +64,7 @@ body {
     width: 90%;
     height: 500px;
     max-width: 400px;
+    min-width: 385px;
 
     /* background-color: rgb(159, 188, 243); */
     border-radius: 10px;
@@ -86,20 +91,35 @@ body {
     justify-content: center;
     height: 60%;
     width: 100%;
-    padding: 40px;
+    padding: 60px 40px 20px 40px;
     background-color: var(--sunny-color);
 }
 
 .weatherInfo__state {
-    font-size: 32px;
+    position: relative;
+    top: 20px;
+
+    display: block;
+    /* overflow-y: hidden; */
+    /* max-width: 160px; */
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s ease-in;
 }
 
 .weatherInfo > p{
+    /* position: relative; */
+    /* top: 10px; */
     margin: 10px;
 }
 
 .weatherInfo__grades {
-    font-size: 60px;
+    position: relative;
+    top: -15px;
+    font-size: 48px;
     font-weight: 700;
 }
 
@@ -111,7 +131,7 @@ body {
     flex-direction: row;
     align-items: center;
     height: 40%;
-    padding: 0 40px;
+    padding: 0 40px 20px 40px;
     background-color: var(--general-card-color);
     width: 100%;
 }
@@ -139,8 +159,10 @@ body {
     justify-content: center;
 }
 .weatherStadistics__right > p {
+    display: inline-block;
+    /* width: 120px; */
     margin: 10px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .weatherStadistics > p {
@@ -153,13 +175,18 @@ body {
     color: #f3b80b;
 }
 
+.btn__weatherDetails {
+    background-color: rgb(208, 208, 248);
+    left: calc(50% - 35px);
+    bottom: 25px;
+}
+
 /* .material-icons {
     font-size: 40px !important;
 } */
 
 @media screen and (min-width: 320px){
     .card {
-        min-width: 280px;
         min-height: 400px;
     }
 }
