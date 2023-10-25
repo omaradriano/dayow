@@ -1,1 +1,4 @@
 node_modules
+
+# Esta carpeta es ignorada por que es donde se realiza testeo de cualquier cosa
+test.js

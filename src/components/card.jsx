@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Button from './Button.jsx'
 
 import Icon from './Icon.jsx';
-const apikey = 'd12a4203bb8343b6b70235323232110' //Api key | Falta buscar la manera de no hacerla pública
+const apikey = 'd12a4203bb8343b6b70235323232110' //⬅️Api key | Falta buscar la manera de no hacerla pública
 
 const Card = () => {
 

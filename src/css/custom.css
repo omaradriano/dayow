@@ -26,8 +26,8 @@
 /* ---------- End Components ---------- */
 
 
-body { 
-    min-height: 100vh; 
+body {
+    min-height: 100vh;
     background-color: bisque;
 }
 
@@ -51,7 +51,7 @@ body {
 
 .card {
     position: relative;
-    top: 20px;
+    margin-top: 20px;
     /* bottom: 0; */
     /* left: 0; */
     /* right: 0;  */
@@ -63,6 +63,7 @@ body {
 
     width: 90%;
     height: 500px;
+    min-height: 500px;
     max-width: 400px;
     min-width: 385px;
 
@@ -110,7 +111,7 @@ body {
     transition: 0.5s ease-in;
 }
 
-.weatherInfo > p{
+.weatherInfo>p {
     /* position: relative; */
     /* top: 10px; */
     margin: 10px;
@@ -145,7 +146,7 @@ body {
     justify-content: center;
 }
 
-.weatherStadistics__left > p {
+.weatherStadistics__left>p {
     margin: 10px;
     font-size: 24px;
 }
@@ -158,16 +159,18 @@ body {
     align-items: flex-end;
     justify-content: center;
 }
-.weatherStadistics__right > p {
+
+.weatherStadistics__right>p {
     display: inline-block;
     /* width: 120px; */
     margin: 10px;
     font-size: 20px;
 }
 
-.weatherStadistics > p {
+.weatherStadistics>p {
     font-size: 28px;
-} 
+}
+
 .weatherIcon__sunny {
     top: calc(15% - 20px);
     left: calc(15% - 20px);
@@ -181,12 +184,26 @@ body {
     bottom: 25px;
 }
 
-/* .material-icons {
-    font-size: 40px !important;
-} */
+/* SwiperJS */
 
-@media screen and (min-width: 320px){
+.swiper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 700px;
+}
+
+@media screen and (min-width: 320px) {
     .card {
-        min-height: 400px;
+        min-height: 500px;
     }
+}
+
+/* Swiper custom */
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
