@@ -5,3 +5,11 @@ Card
     - Modal para mostrar más detalles
     - Botón para refrescar la temperatura
     - Componente Select para elegir la ubicación
+
+Slider
+    - Darle más información y estilos a los Minicard
+Dev Helper icons
+    📝 Documentación
+    ⬅️ Se puede mejorar u optimizar
+    ⛔️ Un error que no se ha corregido
+    ❔  Comentario personal

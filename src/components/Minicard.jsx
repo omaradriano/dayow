@@ -1,14 +1,11 @@
 import Icon from "./Icon.jsx"
-import iconsformat from '../assets/iconsFormat.js';
+import iconsformat from '../utils/iconsFormat.js';
 
+//📝 Aquí se renderizan los datos de los días de clima siguientes
 
 const Minicard = ({ data = '', isLoading = '' }) => {
-
-    // console.log(data)
     return (
         <>
-
-
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item">
                     <h2 className="accordion-header">

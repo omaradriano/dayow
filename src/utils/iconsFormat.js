@@ -1,3 +1,5 @@
+//📝 A este archivo se consulta para elegir los íconos de material icons
+
 const iconsformat = {
   'Despejado': 'mode_night',
   'Soleado': 'light_mode',

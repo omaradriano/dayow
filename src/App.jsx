@@ -11,7 +11,6 @@ const App = () => {
         <>
             <Title className="title" text={msg} />
             <Weather/>
-
         </>
     )
 }

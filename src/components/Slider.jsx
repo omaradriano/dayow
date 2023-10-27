@@ -9,14 +9,17 @@ import Minicard from './Minicard.jsx';
 
 const Slider = ({ data, isLoading }) => {
     // console.log(data)
-    let minicards = null
+    let minicards = []
 
     if(!isLoading){
+        //📝 La cantidad de sliders depende de los datos que se hayan traido del fetch (En este caso 5)
         minicards = data.map(elem => {
-            console.log(elem)
-            return <SwiperSlide key={elem.date}>
+            // console.log(elem)
+            return (
+            <SwiperSlide key={elem.date}>
                 <Minicard key={elem.date} data={elem}/>
             </SwiperSlide>
+            )
         })
         // console.log(minicards)
     }

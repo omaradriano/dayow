@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react';
 import Button from './Button.jsx'
 import Icon from './Icon.jsx';
-import iconsformat from '../assets/iconsFormat.js';
+import iconsformat from '../utils/iconsFormat.js'; //📝 Trae información para poder renderizar correctamente el icono de material icons
 
 const Card = ({ data, isLoading = true }) => {
-
-    console.log(data)
 
     return (
         <section className="weathercard">
             {isLoading ?
                 <Icon icon='sync' customIconClassName='weatherIcon weatherIcon__sunny'></Icon>
                 :
+                //📝El ícono se elige de manera dinámica dependiendo del dato que devuelve data.condition
                 <Icon icon={iconsformat[data.condition]} customIconClassName='weatherIcon weatherIcon__sunny'></Icon>
             }
             <div className='weatherInfo'>
