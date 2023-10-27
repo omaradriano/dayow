@@ -1,10 +1,8 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
 // Import Swiper styles
 import 'swiper/css';
-import Card from './card.jsx';
 
 const Slider = () => {
     return (
@@ -12,20 +10,19 @@ const Slider = () => {
             spaceBetween={10}
             slidesPerView={1}
             onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
-            clickable={true}
+            // onSwiper={(swiper) => console.log(swiper)}
         >
             <SwiperSlide>
-                <Card />
+                <h1>Contenido slide</h1>
             </SwiperSlide>
             <SwiperSlide>
-                <Card />
+                <h1>Contenido slide</h1>
             </SwiperSlide>
             <SwiperSlide>
-                <Card />
+                <h1>Contenido slide</h1>
             </SwiperSlide>
             <SwiperSlide>
-                <Card />
+                <h1>Contenido slide</h1>
             </SwiperSlide>
         </Swiper>
     )

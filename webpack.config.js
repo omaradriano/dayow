@@ -3,6 +3,8 @@ const htmlwebpackplugin = require('html-webpack-plugin')
 
 module.exports = {
     devServer: {
+        watchFiles: ['src/', 'index.html', 'dist/'],
+        hot: true,
         port: 5555,
         // watchFiles: ['src/'],
         static: {

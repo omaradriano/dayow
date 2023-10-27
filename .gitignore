@@ -1,4 +1,4 @@
 node_modules
 
-# Esta carpeta es ignorada por que es donde se realiza testeo de cualquier cosa
+# Este documento es ignorado por que es donde se realiza testeo de cualquier cosa, en este caso para testear las peticiones fetch
 test.js
