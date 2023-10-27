@@ -1,8 +1,10 @@
 import Icon from "./Icon.jsx"
+import iconsformat from '../assets/iconsFormat.js';
+
 
 const Minicard = ({ data = '', isLoading = '' }) => {
 
-    console.log(data)
+    // console.log(data)
     return (
         <>
 
@@ -17,7 +19,7 @@ const Minicard = ({ data = '', isLoading = '' }) => {
                     <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
                             {data.avg_temp}
-                            <Icon icon={'light_mode'} customIconClassName="accordion__icon"/>
+                            <Icon icon={iconsformat[data.condition]} customIconClassName='accordion__icon'></Icon>
                         </div>
                     </div>
                 </div>

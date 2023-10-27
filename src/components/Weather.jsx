@@ -31,37 +31,42 @@ const Weather = () => {
                             min_temp: data.forecast.forecastday[0].day.mintemp_c,
                             max_temp: data.forecast.forecastday[0].day.maxtemp_c,
                             avg_temp: data.forecast.forecastday[0].day.avgtemp_c,
+                            condition: data.forecast.forecastday[1].day.condition.text
                         },
                         {
                             date: data.forecast.forecastday[1].date,
                             min_temp: data.forecast.forecastday[1].day.mintemp_c,
                             max_temp: data.forecast.forecastday[1].day.maxtemp_c,
                             avg_temp: data.forecast.forecastday[1].day.avgtemp_c,
+                            condition: data.forecast.forecastday[1].day.condition.text
                         },
                         {
                             date: data.forecast.forecastday[2].date,
                             min_temp: data.forecast.forecastday[2].day.mintemp_c,
                             max_temp: data.forecast.forecastday[2].day.maxtemp_c,
                             avg_temp: data.forecast.forecastday[2].day.avgtemp_c,
+                            condition: data.forecast.forecastday[1].day.condition.text
                         },
                         {
                             date: data.forecast.forecastday[3].date,
                             min_temp: data.forecast.forecastday[3].day.mintemp_c,
                             max_temp: data.forecast.forecastday[3].day.maxtemp_c,
                             avg_temp: data.forecast.forecastday[3].day.avgtemp_c,
+                            condition: data.forecast.forecastday[1].day.condition.text
                         },
                         {
                             date: data.forecast.forecastday[4].date,
                             min_temp: data.forecast.forecastday[4].day.mintemp_c,
                             max_temp: data.forecast.forecastday[4].day.maxtemp_c,
                             avg_temp: data.forecast.forecastday[4].day.avgtemp_c,
+                            condition: data.forecast.forecastday[1].day.condition.text
                         }
                     ]
                 }
                 setWeather(weatherData)
                 setIsLoading(false)
                 // console.log(weatherData.forecast)
-                // console.log(data.forecast)
+                console.log(data)
             })
             .catch((e) => {
                 console.log(e)

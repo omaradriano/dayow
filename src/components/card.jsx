@@ -1,17 +1,18 @@
 import { useState, useEffect } from 'react';
 import Button from './Button.jsx'
 import Icon from './Icon.jsx';
+import iconsformat from '../assets/iconsFormat.js';
 
 const Card = ({ data, isLoading = true }) => {
 
-    // console.log(data)
+    console.log(data)
 
     return (
         <section className="weathercard">
             {isLoading ?
                 <Icon icon='sync' customIconClassName='weatherIcon weatherIcon__sunny'></Icon>
                 :
-                <Icon icon='light_mode' customIconClassName='weatherIcon weatherIcon__sunny'></Icon>
+                <Icon icon={iconsformat[data.condition]} customIconClassName='weatherIcon weatherIcon__sunny'></Icon>
             }
             <div className='weatherInfo'>
                 <p className="weatherInfo__grades">{isLoading ? 'Loading' : data.temp}°</p>

@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import Minicard from './Minicard.jsx';
 
 const Slider = ({ data, isLoading }) => {
-    console.log(data)
+    // console.log(data)
     let minicards = null
 
     if(!isLoading){
@@ -18,7 +18,7 @@ const Slider = ({ data, isLoading }) => {
                 <Minicard key={elem.date} data={elem}/>
             </SwiperSlide>
         })
-        console.log(minicards)
+        // console.log(minicards)
     }
     return (
         <Swiper
