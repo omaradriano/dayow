@@ -4,7 +4,7 @@ import Weather from "./components/Weather.jsx";
 
 import './css/custom.css'
 
-let msg = 'Day OW'
+let msg = 'Day of week'
 
 const App = () => {
     return (

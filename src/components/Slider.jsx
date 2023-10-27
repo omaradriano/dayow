@@ -1,29 +1,35 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/navigation';
+import Minicard from './Minicard.jsx';
 
-const Slider = () => {
+const Slider = ({ data, isLoading }) => {
+    console.log(data)
+    let minicards = null
+
+    if(!isLoading){
+        minicards = data.map(elem => {
+            console.log(elem)
+            return <SwiperSlide key={elem.date}>
+                <Minicard key={elem.date} data={elem}/>
+            </SwiperSlide>
+        })
+        console.log(minicards)
+    }
     return (
         <Swiper
+            modules={ [Navigation] }
             spaceBetween={10}
             slidesPerView={1}
+            navigation
             onSlideChange={() => console.log('slide change')}
-            // onSwiper={(swiper) => console.log(swiper)}
+        // onSwiper={(swiper) => console.log(swiper)}
         >
-            <SwiperSlide>
-                <h1>Contenido slide</h1>
-            </SwiperSlide>
-            <SwiperSlide>
-                <h1>Contenido slide</h1>
-            </SwiperSlide>
-            <SwiperSlide>
-                <h1>Contenido slide</h1>
-            </SwiperSlide>
-            <SwiperSlide>
-                <h1>Contenido slide</h1>
-            </SwiperSlide>
+            {minicards}
         </Swiper>
     )
 }
