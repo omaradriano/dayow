@@ -1,6 +1,6 @@
 //📝 A este archivo se consulta para elegir los íconos de material icons
 
-const iconsformat = {
+const iconsformat = { //⬅️ Buscar más opciones de íconos ya que material-icons no tiene "muchos"
   'Despejado': 'mode_night',
   'Soleado': 'light_mode',
   'Parcialmente nublado': 'cloud_queue',

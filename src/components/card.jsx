@@ -13,21 +13,21 @@ const Card = ({ data, isLoading = true }) => {
                 //📝El ícono se elige de manera dinámica dependiendo del dato que devuelve data.condition
                 <Icon icon={iconsformat[data.condition]} customIconClassName='weatherIcon weatherIcon__sunny'></Icon>
             }
-            <div className='weatherInfo'>
-                <p className="weatherInfo__grades">{isLoading ? 'Loading' : data.temp}°</p>
-                <p className="weatherInfo__location">{isLoading ? 'Loading' : data.location}</p>
-                <p className="weatherInfo__state">{isLoading ? 'Loading' : data.condition}</p>
+            <div className={`weatherInfo ${isLoading ? 'placeholder-glow' : ''}`}>
+                <p className={`weatherInfo__grades ${isLoading ? 'placeholder col-3' : ''}`}>{isLoading ? '' : data.temp}°</p>
+                <p className={`weatherInfo__location ${isLoading ? 'placeholder' : ''}`}>{isLoading ? 'Loading' : data.location}</p>
+                <p className={`weatherInfo__state ${isLoading ? 'placeholder' : ''}`}>{isLoading ? 'Loading' : data.condition}</p>
             </div>
             <div className="weatherStadistics">
                 <div className="weatherStadistics__left">
                     <p>Viento</p>
                     <p>Humedad</p>
                 </div>
-                <div className="weatherStadistics__right">
-                    <p>{isLoading ? 'Loading' : data.wind_direction} {isLoading ? 'Loading' : data.wind} KPH</p>
-                    <p>{isLoading ? 'Loading' : data.humidity}%</p>
+                <div className={`weatherStadistics__right ${isLoading ? 'placeholder-glow' : ''}`}>
+                    <p className={isLoading ? 'placeholder' : ''}>{isLoading ? 'Loading' : data.wind_direction} {isLoading ? 'Loading' : data.wind} KPH</p>
+                    <p className={isLoading ? 'placeholder' : ''}>{isLoading ? 'Loading' : data.humidity}%</p>
                 </div>
-                <Button text='Detalles' customClassName='btn__weatherDetails'></Button>
+                <Button text='Detalles' customClassName={`btn__weatherDetails ${isLoading ? 'placeholder' : ''}`}></Button>
             </div>
         </section>
     )
