@@ -9,16 +9,16 @@ import Minicard from './Minicard.jsx';
 
 const Slider = ({ data, isLoading }) => {
     // console.log(data)
-    let minicards = []
+    let minicards = [] //📝Arreglo donde se guarda la minicard con sus respectivos datos de renderizado
 
     if(!isLoading){
-        //📝 La cantidad de sliders depende de los datos que se hayan traido del fetch (En este caso 5)
+        //📝 La cantidad de sliders depende de los datos que se hayan traido del fetch (En este caso 3)
         minicards = data.map(elem => {
             // console.log(elem)
             return (
-            <SwiperSlide key={elem.date}>
-                <Minicard key={elem.date} data={elem}/>
-            </SwiperSlide>
+                <SwiperSlide key={elem.date}>
+                    <Minicard key={elem.date} data={elem}/>
+                </SwiperSlide>
             )
         })
         // console.log(minicards)
@@ -29,7 +29,7 @@ const Slider = ({ data, isLoading }) => {
             spaceBetween={10}
             slidesPerView={1}
             navigation
-            onSlideChange={() => console.log('slide change')}
+            // onSlideChange={() => console.log('slide change')}
         // onSwiper={(swiper) => console.log(swiper)}
         >
             {minicards}
