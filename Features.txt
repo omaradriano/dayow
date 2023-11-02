@@ -2,7 +2,7 @@ Documento destinado a agregar las futuras implementaciones
 
 Card
     - Una brújula para representación visual de orientación del viento
-    - Modal para mostrar más detalles
+    - Modal para mostrar más detalles ⬇️
     - Botón para refrescar la temperatura
     - Componente Select para elegir la ubicación
 
@@ -13,3 +13,4 @@ Dev Helper icons
     ⬅️ Se puede mejorar u optimizar
     ⛔️ Un error que no se ha corregido
     ❔  Comentario personal
+    ⬇️ Implementación actual

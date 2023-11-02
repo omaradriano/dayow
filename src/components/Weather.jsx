@@ -11,14 +11,13 @@ const Weather = () => {
     useEffect(() => {
         fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apikey}&q=chihuahua&lang=es&days=3`) //Falta gregar un componente (Select) para elegir la ubicación
             .then(res => {
-                console.log(res)
+                // console.log(res)
                 return res.json() //⬅️Agregar si la respuesta además de ser OK, devuelve los datos correctos
             })
             .then(data => {     
                 let weatherData = saveFetchedData(data)
                 setWeather(weatherData)
                 setIsLoading(false)
-                // console.log(weatherData.forecast)
                 // console.log(data)
             })
             .catch((e) => {

@@ -7,7 +7,6 @@
     "build": "webpack",
     "server": "webpack serve"
   },
-  "type": "module",
   "keywords": [],
   "author": "Omar Adrian",
   "license": "ISC",

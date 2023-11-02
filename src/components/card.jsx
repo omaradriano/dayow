@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Button from './Button.jsx'
 import Icon from './Icon.jsx';
 import iconsformat from '../utils/iconsFormat.js'; //📝 Trae información para poder renderizar correctamente el icono de material icons
+import Modal from './Modal.jsx';
 
 const Card = ({ data, isLoading = true }) => {
 
@@ -29,6 +30,10 @@ const Card = ({ data, isLoading = true }) => {
                 </div>
                 <Button text='Detalles' customClassName={`btn__weatherDetails ${isLoading ? 'placeholder' : ''}`}></Button>
             </div>
+            {/* Boton para mostrar los detalles */}
+            {!isLoading ? <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch demo modal</button> : ''}
+            {!isLoading ? <Modal data={data} isLoading={isLoading}/> : ''}
+            
         </section>
     )
 }
