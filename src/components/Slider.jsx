@@ -8,13 +8,11 @@ import 'swiper/css/navigation';
 import Minicard from './Minicard.jsx';
 
 const Slider = ({ data, isLoading }) => {
-    // console.log(data)
     let minicards = [] //📝Arreglo donde se guarda la minicard con sus respectivos datos de renderizado
 
     if(!isLoading){
         //📝 La cantidad de sliders depende de los datos que se hayan traido del fetch (En este caso 3)
-        minicards = data.map(elem => {
-            // console.log(elem)
+        minicards = data.splice(1,).map(elem => {
             return (
                 <SwiperSlide key={elem.date}>
                     <Minicard key={elem.date} data={elem}/>

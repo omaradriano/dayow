@@ -18,17 +18,17 @@ const Weather = () => {
                 let weatherData = saveFetchedData(data)
                 setWeather(weatherData)
                 setIsLoading(false)
-                // console.log(data)
             })
             .catch((e) => {
                 console.log(e)
+                console.log('Intento de fetch con datos fallido')
             })
     }, [])
 
     return (
         <>
-            <Card data={weather.current} isLoading={isLoading} />
-            <h4 style={{margin: '20px 0'}}>Next Days</h4>
+            <Card data={weather} isLoading={isLoading} />
+            {!isLoading ? <h4 style={{margin: '20px 0'}}>Next Days</h4> : ''}
             <Slider data={weather.forecast} isLoading={isLoading}/>
         </>
     )

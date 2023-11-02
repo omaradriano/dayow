@@ -10,6 +10,8 @@
 :root {
     --sunny-color: #fbda78;
     --general-card-color: #f5f5f5;
+    --bg-dark: #434343;
+    --bg-white: #eaeaea;
 }
 
 
@@ -40,7 +42,7 @@
 
 body {
     min-height: 100vh;
-    background-color: bisque;
+    background-color: var(--bg-white) !important;
 }
 
 #root {
@@ -90,7 +92,7 @@ body {
     outline: none;
     border: none;
 
-    /* box-shadow: 2px 2px 5px 0.5px rgba(0, 0, 0, 0.5); */
+    box-shadow: 2px 2px 5px 0.5px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 
 }
@@ -198,13 +200,15 @@ body {
 
 .btn__weatherDetails {
     background-color: rgb(208, 208, 248);
-    left: calc(50% - 35px);
+    left: calc(50% - 50px);
     bottom: 25px;
+    /* background-color: rgb(104, 189, 104) !important; */
+    box-shadow: 1px 1px 3px 0.2px rgba(0, 0, 0, 0.5);
 }
 
 /* ----------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------- */
-/* -------------Collapse que muestra los siguientes 5 días de clima------------- */
+/* -------------Collapse que muestra los siguientes 3 días de clima------------- */
 /* ----------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------- */
 
@@ -247,6 +251,80 @@ body {
     display: flex;
     /* align-items: center; */
     justify-content: center;
+}
+
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+/* ----------------------------------Modal---------------------------------- */
+/* ------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+
+.modal-body--custom {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.weatherIcon__modal {
+    font-size: 100px !important;
+}
+
+.modal-body__perHour {
+    position: absolute;
+    bottom: 50px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 90%;
+    /* background-color: red; */
+    height: calc(85% - 135px);
+    padding: 10px;
+
+    overflow-y: scroll;
+}
+
+/* .modal-body__perHour > p {
+    position: absolute;
+    top: 20px;
+} */
+
+.perHourCard{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 10px;
+    margin: 10px 5px;
+    width: 95%;
+    min-height: 90px;
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+}
+
+.perHourCard__1stLine, .perHourCard__2ndLine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+.perHourCard__1stLine > p, .perHourCard__1stLine > span,
+.perHourCard__2ndLine > p, .perHourCard__2ndLine > span
+{
+    /* margin-right: 10px; */
+    margin-bottom: 0;
+}
+
+.modal-footer--custom {
+    height: 100px;
 }
 
 /* ------------------------------------------------------------------------- */
