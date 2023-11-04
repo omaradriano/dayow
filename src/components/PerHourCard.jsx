@@ -2,7 +2,7 @@ import iconsformat from "../utils/iconsFormat.js"
 import Icon from "./Icon.jsx"
 
 const PerHourCard = ({ data }) => {
-    console.log(data)
+    // console.log(data)
     return (
         <>
             <div className="perHourCard">

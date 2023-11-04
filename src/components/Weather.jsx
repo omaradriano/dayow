@@ -28,7 +28,7 @@ const Weather = () => {
     return (
         <>
             <Card data={weather} isLoading={isLoading} />
-            {!isLoading ? <h4 style={{margin: '20px 0'}}>Next Days</h4> : ''}
+            {!isLoading ? <h4 id="nextdays" style={{margin: '20px 0'}}>Next Days</h4> : ''}
             <Slider data={weather.forecast} isLoading={isLoading}/>
         </>
     )
